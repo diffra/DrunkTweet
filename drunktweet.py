@@ -1,6 +1,8 @@
 # drunktweet.py
 '''
-Print out possible drunk tweets from the city of Chicago.
+Print out possible drunk tweets from anywhere in the world.
+
+Usage: ./drunktweet.py London, UK
 '''
 
 import regex
@@ -46,10 +48,3 @@ for line in r.iter_lines():
         words = status.split()
         if any(pat.match(word) for word in words):
            print(tweet['user']['screen_name'], status)
-
-# Print possible candidates
-#for line in r.iter_lines():
-#    if line:
-#        tweet = json.loads(line)
-#        status = tweet.get('text',u'')
-#        print(tweet['user']['screen_name'], status)
