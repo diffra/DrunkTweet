@@ -37,7 +37,7 @@ location=geosearch(" ".join(sys.argv[1:]))
 parms = {
     'locations' : location[0][0]+","+location[0][1]+","+location[1][0]+","+location[1][1]
     }
-auth  = ('diffra','Tnwb0@mTw')
+auth  = ('diffra','password')
 r = requests.post(url, data=parms, auth=auth)
 
 # Print possible candidates
